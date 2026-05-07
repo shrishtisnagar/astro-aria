@@ -23,7 +23,7 @@ import Project from "../project.astro";
           <Project
             name={project.name}
             description={project.description}
-            image={`${import.meta.env.BASE_URL}${project.image.slice(1)}`}
+            image={`${import.meta.env.BASE_URL}${project.image}`}
             url={project.url}
           />
         )
