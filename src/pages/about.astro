@@ -12,7 +12,7 @@ import Layout from "../layouts/main.astro";
       description="Hello 👋 I'm a frontend engineer from Nanjing, China. I'm passionate about building new products and learning new technology."
     />
 
-    <img src="/assets/images/about.jpg" class="relative z-30 w-full my-10 rounded-xl" />
+    <img src={`${import.meta.env.BASE_URL}assets/images/about.jpg`} class="relative z-30 w-full my-10 rounded-xl" />
 
     <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">Short Bio</h2>
     <p
@@ -36,7 +36,7 @@ import Layout from "../layouts/main.astro";
                 role={experience.role}
                 company={experience.company}
                 description={experience.description}
-                logo={experience.logo}
+                logo={`${import.meta.env.BASE_URL}${experience.logo.slice(1)}`}
               />
             </div>
           )
